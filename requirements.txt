@@ -1,0 +1,7 @@
+flask[async]~=2.0
+pymongo~=3.11
+jsonclasses~=2.5
+jsonclasses-pymongo~=2.5
+jsonclasses-flask~=2.5
+requests~=2.26
+pyjwt~=2.1
