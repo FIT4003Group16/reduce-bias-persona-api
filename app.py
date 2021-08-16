@@ -3,8 +3,16 @@ from flask import Flask, Response, request
 from jsonclasses_pymongo import Connection
 from jsonclasses_flask import jsonclasses_integrate, data, empty, encode_jwt_token
 from models.persona import Persona
+from models.gender import Gender
+from utils.jsjson_encoder import JSJSONEncoder
+from utils.data import data
+from utils.empty import empty
+
 
 app = Flask(__name__)
+
+app.json_encoder = JSJSONEncoder
+
 
 @app.get('/personas')
 async def personas() -> Response:

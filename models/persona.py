@@ -9,5 +9,6 @@ from models.gender import Gender
 class Persona(BaseObject):
     name: str = types.str.required
     age: int = types.int.min(0).required
-    gender: Gender = types.enum(Gender).writeonce
+    gender: Optional[Gender] = types.enum(Gender).required
     goals: list[str] = types.listof(str).nonnull.required
+    to_do_list: list[str] = types.listof(str).nonnull.required
