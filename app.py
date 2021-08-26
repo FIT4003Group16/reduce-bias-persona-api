@@ -25,7 +25,7 @@ jsonclasses_integrate(app, cors={
 
 @app.get('/personas')
 async def personas() -> Response:
-    return data(await Persona.find())
+    return data(await Persona.find().include('bias'))
 
 
 @app.get('/personas/<id>')
