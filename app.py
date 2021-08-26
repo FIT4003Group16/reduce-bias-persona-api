@@ -30,7 +30,7 @@ async def personas() -> Response:
 
 @app.get('/personas/<id>')
 async def persona(id: str) -> Response:
-    return data(await Persona.id(id))
+    return data(await Persona.id(id).include('bias'))
 
 
 @app.post('/personas')

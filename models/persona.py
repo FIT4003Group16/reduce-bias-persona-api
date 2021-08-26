@@ -17,3 +17,4 @@ class Persona(BaseObject):
     goals: list[str] = types.listof(str).nonnull.required
     to_do_list: list[str] = types.listof(str).nonnull.required
     bias: Bias = types.instanceof('Bias').linkto.required
+    detail: str = types.str.required
